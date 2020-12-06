@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #0C7192;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.c_sales">
+   <children>
+      <AnchorPane layoutX="7.0" layoutY="8.0" prefHeight="686.0" prefWidth="1186.0" style="-fx-background-color: #fafafa;" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+         <children>
+            <ComboBox editable="true" layoutX="937.0" layoutY="30.0" prefHeight="25.0" prefWidth="256.0" promptText="Выберите" AnchorPane.rightAnchor="7.0" />
+            <Button fx:id="btn_showTable" contentDisplay="RIGHT" layoutX="14.0" layoutY="30.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="127.0" text="Обновить продажи" AnchorPane.leftAnchor="14.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="18.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../excel.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <DatePicker layoutX="754.0" layoutY="30.0" />
+            <DatePicker layoutX="570.0" layoutY="30.0" />
+            <TabPane layoutX="14.0" layoutY="91.0" prefHeight="586.0" prefWidth="1174.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="91.0">
+              <tabs>
+                <Tab text="Untitled Tab 1">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="gridSales" editable="true" layoutX="4.0" layoutY="2.0" prefHeight="555.0" prefWidth="1168.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                <columns>
+                                    <TableColumn fx:id="r_id" prefWidth="23.0" sortable="false" />
+                                  <TableColumn fx:id="sale_id" prefWidth="127.0" text="sale_id" />
+                                    <TableColumn fx:id="sale_number" editable="true" prefWidth="75.0" text="sale_number" />
+                                    <TableColumn fx:id="sale_date" editable="true" prefWidth="75.0" text="sale_date" />
+                                    <TableColumn fx:id="sale_koeff" editable="true" prefWidth="75.0" text="sale_koeff" />
+                                    <TableColumn fx:id="product_id" prefWidth="75.0" text="product_id" />
+                                    <TableColumn fx:id="sold" prefWidth="75.0" text="sold" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Untitled Tab 2">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
